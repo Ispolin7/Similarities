@@ -1,0 +1,17 @@
+{% extends "layout.html" %}
+
+{% block body %}
+
+            <form action="/score" method="post">
+
+                <div class="form-group">
+                    <input type="text" name="string1" class="form-control" placeholder="Первая строка">
+                </div>
+
+                <div class="form-group">
+                    <input type="text" name="string2" class="form-control" placeholder="Вторая строка">
+                </div>
+
+                <button type="submit" class="btn btn-primary">Отправить</button>
+            </form>
+{% endblock %}

@@ -1,0 +1,43 @@
+
+<div>
+    <table class="table table-striped">
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+
+            {% for char in s2 %}
+            <th>{{char}}</th>
+            {% endfor%}
+
+        </tr>
+
+        <tr>
+            <td></td>
+            <td></td>
+
+            {% for number in range( s2|length + 1) %}
+            <th>{{number}}</th>
+            {% endfor%}
+
+        </tr>
+        <tr>
+            <td></td>
+            <th>0</th>
+
+            {% for j in matrix[0] %}
+            <td>{{ j[0] }}</td>
+            {% endfor%}
+        </tr>
+        {% for i in range( s1|length )%}
+        <tr>
+            <th>{{ s1[i] }}</th>
+            <th>{{i+1}}</th>
+            {% for m in matrix[i+1] %}
+            <td>{{ m[0] }}</td>
+            {% endfor %}
+        </tr>
+        {% endfor %}
+
+    </table>
+</div>
